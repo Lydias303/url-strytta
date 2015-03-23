@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :url do
-    original_url "MyString"
-shortened_url "MyString"
-title "MyString"
+    original_url "imalongurl"
+    shortened_url "shorturl"
+    title "My Url"
   end
-
 end
