@@ -1,0 +1,18 @@
+<p>Urls</p>
+</div>
+<div class="well">
+<% @urls.each do |f| %>
+  <%= f.title %>
+  <%= f.clicks %>
+  <%= link_to f.shortened_url, url_path(f.id) %><br>
+<% end %>
+</div>
+
+<div class="search-field">
+  <div class="form">
+  <%= form_tag("/urls", method: "get") do %>
+    <%= text_field_tag :shortened_url %>
+    <%= submit_tag("Filter")%>
+  <% end %>
+</div>
+</div>

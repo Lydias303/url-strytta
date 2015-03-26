@@ -1,3 +1,38 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+ color: #dc6312;
+}
+
+.welcome-header {
+  padding: 100px;
+}
+body {
+  font-family: 'Lobster', cursive;
+  background: rgba(21, 193, 220, 0.4);
+}
+
+.inner-well {
+  background: black;
+  padding: 80px;
+}
+
+input#original_url {
+  border-radius: 25px;
+}
+
+.form {
+  align: center;
+  margin-left: 50px;
+}
+
+.display-links {
+  padding-left: 50px;
+}
+
+.urls-index-header {
+  margin-left: 700px;
+}
