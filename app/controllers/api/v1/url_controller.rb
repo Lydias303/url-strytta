@@ -37,7 +37,7 @@ class Api::V1::UrlController < ApplicationController
 
     if @url.update(url_params)
       respond_to do |format|
-        format.html { redirect_to urls_path, notice: "Updated!"}
+        format.html { redirect_to root_path, notice: "Updated!"}
         format.json { render json: {message: "Updated", url: @url}}
       end
     else

@@ -1,9 +1,10 @@
 class Url < ActiveRecord::Base
   before_create :generate_shortened_url
+  validates :original_url, presence: true
+  validates :shortened_url, uniqueness: true
 
   def generate_shortened_url
-    self.shortened_url = self.id.to_s(36)
-    self.save
+    self.shortened_url = rand(36**6).to_s(36)
   end
 
   def display_shortened_url

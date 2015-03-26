@@ -1,9 +1,19 @@
-<div class="row">
-  <h1>Stytta</h1>
+<div class="row welcome-header">
+  <div class="col-md-6 col-md-offset-2">
+    <h1>Stytta</h1>
+    <h2><%= image_tag "link.png" %> Unleash the power of the link </h2>
+  </div>
+
+<!-- <div class="row">
+  <%= render "shared/nav" %>
+</div> -->
+<div class="col-md-1">
+<a href="/urls"><%= image_tag "index.png" %></a>
+</div>
 </div>
 <div class="row">
   <div class="col-md-2, col-md-offset-5">
-    <%= form_for :url do |f| %>
+    <%= form_for @url do |f| %>
     <%= f.text_field :original_url %>
     <%= f.submit %>
     <% end %>

@@ -1,0 +1,10 @@
+<div class="row">
+  <%= image_tag "popularity.png" %>
+  <%= image_tag "most-recent.png" %>
+</div>
+
+<h1>Urls</h1>
+  <% @urls.each do |f| %>
+    <%= f.original_url %>
+    <%= f.shortened_url %>
+  <% end %>
