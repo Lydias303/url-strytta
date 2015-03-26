@@ -10,4 +10,9 @@ class Url < ActiveRecord::Base
   def display_shortened_url
     ENV['BASE_URL'] + self.shortened_url
   end
+
+  def count_clicks
+    
+    clicks += 1
+  end
 end
