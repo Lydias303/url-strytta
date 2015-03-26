@@ -1,14 +1,18 @@
-<div class="row urls-index-header">
-  <div class="col-md-2 col-md-offset-1" id="url-title">
-  <p>Urls</p>
+<p>Urls</p>
 </div>
-  <%= image_tag "popularity.png" %>
-  <%= image_tag "most-recent.png" %>
+<div class="well">
+<% @urls.each do |f| %>
+  <%= f.title %>
+  <%= f.clicks %>
+  <%= link_to f.shortened_url, url_path(f.id) %><br>
+<% end %>
 </div>
 
-<div class="well">
-  <% @urls.each do |f| %>
-    <%= f.original_url %>
-    <%= f.shortened_url %>
+<div class="search-field">
+  <div class="form">
+  <%= form_tag("/urls", method: "get") do %>
+    <%= text_field_tag :shortened_url %>
+    <%= submit_tag("Filter")%>
   <% end %>
+</div>
 </div>

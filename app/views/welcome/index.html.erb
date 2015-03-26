@@ -4,12 +4,9 @@
     <h2><%= image_tag "link.png" %> Unleash the power of the link </h2>
   </div>
 
-<!-- <div class="row">
-  <%= render "shared/nav" %>
+  <!-- <div class="col-md-1">
+  <a href="/urls"><%= image_tag "index.png" %></a>
 </div> -->
-<div class="col-md-1">
-<a href="/urls"><%= image_tag "index.png" %></a>
-</div>
 </div>
 <div class="row">
   <div class="col-md-2, col-md-offset-5">
@@ -17,5 +14,32 @@
     <%= f.text_field :original_url, required: true %>
     <%= f.submit %>
     <% end %>
+  </div>
+</div>
+<div class="row urls-index-header">
+  <%= link_to image_tag("popularity.png"), urls_path(sort: 'popularity') %>
+  <%= link_to image_tag("most-recent.png"), urls_path(sort: 'most-recent') %>
+  <a href="/urls"><%= image_tag "index.png" %></a>
+</div>
+
+<div class="well">
+  <div class="well inner-well">
+  <div class="col-md-3 col-md-offset-1" id="url-title">
+    <p>Urls</p>
+    <div class="search-field">
+      <div class="form">
+        <%= form_tag("/urls", method: "get", class: "search-field") do %>
+        <%= text_field_tag :original_url %>
+        <%= submit_tag("Filter", class: "btn btn-info")%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="display-links">
+    <% @urls.each do |f| %>
+    <%= f.title %>
+    <%= link_to f.display_shortened_url, url_path(f.id) %><br>
+    <% end %>
+  </div>
   </div>
 </div>

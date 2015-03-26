@@ -18,11 +18,17 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem "bootstrap_form"
+
+gem 'bootstrap-modal-rails'
+
 gem 'bootstrap-sass'
 
 gem 'figaro'
 
 gem 'responders', '~> 2.0'
+
+
 
 
 
@@ -46,4 +52,8 @@ group :development, :test do
 
   gem 'figaro'
 
+
+  gem 'better_errors'
+
+  gem 'binding_of_caller'
 end
