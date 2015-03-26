@@ -1,10 +1,14 @@
-<div class="row">
+<div class="row urls-index-header">
+  <div class="col-md-2 col-md-offset-1" id="url-title">
+  <p>Urls</p>
+</div>
   <%= image_tag "popularity.png" %>
   <%= image_tag "most-recent.png" %>
 </div>
 
-<h1>Urls</h1>
+<div class="well">
   <% @urls.each do |f| %>
     <%= f.original_url %>
     <%= f.shortened_url %>
   <% end %>
+</div>
