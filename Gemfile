@@ -24,13 +24,13 @@ gem 'bootstrap-modal-rails'
 
 gem 'bootstrap-sass'
 
-gem 'figaro'
-
 gem 'responders', '~> 2.0'
 
+gem 'httparty'
 
+gem 'nokogiri'
 
-
+gem 'font-awesome-sass'
 
 group :development, :test do
 
@@ -51,7 +51,6 @@ group :development, :test do
   gem 'pry'
 
   gem 'figaro'
-
 
   gem 'better_errors'
 
