@@ -1,15 +1,17 @@
 
 h1 {
-  font-size: 70px;
+  font-size: 120px;
+  margin-top: 50px;
 }
 
-h2 {
+.link-text {
  color: #dc6312;
+ font-size: 30px;
 }
 
-.welcome-header {
-  padding: 100px;
-}
+// .welcome-header {
+//   padding: 100px;
+// }
 
 body {
   font-family: 'Lobster', cursive;
@@ -42,15 +44,18 @@ input#url_original_url {
 
 .btn {
   border-radius: 25px;
+  background: rgba(209, 85, 233, 0.72);
+  border: #9516c7;
+  padding: 6px;
 }
 
 #text_box {
   margin-top: 5px;
-  margin-right: 25px;
   border-radius: 25px;
   padding: 6px;
   border: solid 2px #38d5fb;
   outline: none;
+  padding-right: 20px;
 }
 
 li {
@@ -72,9 +77,9 @@ a {
   color: #ff925c;
 }
 
-.create-shortened-url {
-  padding: 50px;
-}
+// .create-shortened-url {
+//   padding: 50px;
+// }
 
 .url-list {
   background: black;
@@ -82,4 +87,56 @@ a {
 
 #url-title {
   margin-top: 20px;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.mini-submenu{
+  display:none;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 9px;
+  /*position: relative;*/
+  width: 42px;
+
+}
+
+.mini-submenu:hover{
+  cursor: pointer;
+}
+
+.mini-submenu .icon-bar {
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin-top: 3px;
+}
+
+.mini-submenu .icon-bar {
+  background-color: #000;
+}
+
+.filter-text {
+  margin-right: 500px;
+}
+
+#slide-submenu{
+  background: rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bubble {
+  background: black;
+}
+
+#new_url {
+  margin-top: 150px;
+}
+
+.octo {
+  margin-top: 0px;
 }
