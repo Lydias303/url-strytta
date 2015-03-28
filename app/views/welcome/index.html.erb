@@ -3,16 +3,12 @@
     <h1>Stytta</h1>
     <h2><%= image_tag "link.png" %> Unleash the power of the link </h2>
   </div>
-
-  <!-- <div class="col-md-1">
-  <a href="/urls"><%= image_tag "index.png" %></a>
-</div> -->
 </div>
 <div class="row">
   <div class="col-md-2, col-md-offset-5">
     <%= form_for @url do |f| %>
     <%= f.text_field :original_url, required: true %>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-info"%>
     <% end %>
   </div>
 </div>
@@ -22,24 +18,39 @@
   <a href="/urls"><%= image_tag "index.png" %></a>
 </div>
 
+<div class="row">
 <div class="well">
   <div class="well inner-well">
-  <div class="col-md-3 col-md-offset-1" id="url-title">
-    <p>Urls</p>
-    <div class="search-field">
-      <div class="form">
-        <%= form_tag("/urls", method: "get", class: "search-field") do %>
-        <%= text_field_tag :original_url %>
-        <%= submit_tag("Filter", class: "btn btn-info")%>
-        <% end %>
+    <div class="row">
+    <div class="col-md-3" id="url-title">
+      <p>Urls</p>
+    </div>
+    <div class="col-md-3 col-md-offset-6" id="url-title">
+      <div class="search-field">
+        <form>
+          <input type="text" id="text_box" />
+      </form>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3" id="url-title">
+      <div class="display-links">
+        <ul>
+          <% @urls.each do |f| %>
+            <li><%= f.title %></li>
+            <li><%= link_to f.display_shortened_url, url_path(f.id) %></li><br>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="display-links">
-    <% @urls.each do |f| %>
-    <%= f.title %>
-    <%= link_to f.display_shortened_url, url_path(f.id) %><br>
-    <% end %>
-  </div>
-  </div>
 </div>
+</div>
+
+<script>
+  $("#text_box").keyup(function() {
+    $("li").hide();
+    var term = $(this).val();
+    $("li:contains('"+ term +"')").show();
+  });
+</script>

@@ -10,6 +10,7 @@ h2 {
 .welcome-header {
   padding: 100px;
 }
+
 body {
   font-family: 'Lobster', cursive;
   background: rgba(21, 193, 220, 0.4);
@@ -17,7 +18,7 @@ body {
 
 .inner-well {
   background: black;
-  padding: 80px;
+  padding-bottom: 500px;
 }
 
 input#original_url {
@@ -35,4 +36,22 @@ input#original_url {
 
 .urls-index-header {
   margin-left: 700px;
+}
+
+input#url_original_url {
+  border-radius: 25px;
+  padding: 6px;
+  outline: none;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+#text_box {
+  margin-top: 50px;
+  border-radius: 25px;
+  padding: 6px;
+  border: solid 2px rgba(86, 210, 229, 0.72);
+  outline: none;
 }
