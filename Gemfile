@@ -28,6 +28,10 @@ gem 'responders', '~> 2.0'
 
 gem 'httparty'
 
+gem 'nokogiri'
+
+gem 'font-awesome-sass', '~> 4.3.0'
+
 group :development, :test do
 
   gem 'byebug'

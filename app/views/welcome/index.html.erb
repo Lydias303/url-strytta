@@ -37,8 +37,7 @@
       <div class="display-links">
         <ul>
           <% @urls.each do |f| %>
-            <li><%= f.title %></li>
-            <li><%= link_to f.display_shortened_url, url_path(f.id) %></li><br>
+            <li><%= f.title %> <i class="fa fa-compress"></i><%= link_to f.display_shortened_url, url_path(f.id) %></li><br>
           <% end %>
         </ul>
       </div>

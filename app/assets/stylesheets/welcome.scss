@@ -52,6 +52,21 @@ input#url_original_url {
   margin-top: 50px;
   border-radius: 25px;
   padding: 6px;
-  border: solid 2px rgba(86, 210, 229, 0.72);
+  border: solid 2px #38d5fb;
   outline: none;
+}
+
+li {
+  list-style: none;
+  color: #38d5fb;
+  font-size: 15px;
+}
+
+a:hover {
+  color: #38d5fb;
+  text-decoration: none;
+}
+
+a {
+  color: white;
 }
