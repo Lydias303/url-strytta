@@ -30,7 +30,7 @@ gem 'httparty'
 
 gem 'nokogiri'
 
-gem 'font-awesome-sass', '~> 4.3.0'
+gem 'font-awesome-sass'
 
 group :development, :test do
 

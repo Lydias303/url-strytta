@@ -18,11 +18,11 @@ body {
 
 .inner-well {
   background: black;
-  padding-bottom: 500px;
 }
 
 input#original_url {
   border-radius: 25px;
+  margin-bottom: 100px;
 }
 
 .form {
@@ -32,10 +32,6 @@ input#original_url {
 
 .display-links {
   padding-left: 50px;
-}
-
-.urls-index-header {
-  margin-left: 700px;
 }
 
 input#url_original_url {
@@ -49,7 +45,8 @@ input#url_original_url {
 }
 
 #text_box {
-  margin-top: 50px;
+  margin-top: 5px;
+  margin-right: 25px;
   border-radius: 25px;
   padding: 6px;
   border: solid 2px #38d5fb;
@@ -69,4 +66,20 @@ a:hover {
 
 a {
   color: white;
+}
+
+.font-icon {
+  color: #ff925c;
+}
+
+.create-shortened-url {
+  padding: 50px;
+}
+
+.url-list {
+  background: black;
+}
+
+#url-title {
+  margin-top: 20px;
 }
