@@ -32,6 +32,8 @@ gem 'nokogiri'
 
 gem 'font-awesome-sass'
 
+gem 'sidekiq'
+
 group :development, :test do
 
   gem 'byebug'
