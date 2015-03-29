@@ -40,7 +40,7 @@ RSpec.describe Api::V1::UrlController, type: :controller do
       post :create, json
 
       url = JSON.parse(response.body)
-      require 'pry' ; binding.pry
+  
 
       expect(Url.count).to eq(1)
     end

@@ -14,16 +14,14 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
     @url.clicks += 1
     @url.save
-    flash[:notice] = "Link has been shortened!"
     redirect_to @url.original_url
   end
 
   def create
     @url = Url.new(url_params)
     if @url.save
-      flash[:notice] = "Your shortened url has been created!"
       FindTitleWorker.perform_async(@url.id)
-      redirect_to root_path
+      redirect_to root_path, notice: "Your shortened url has been created!"
     else
       flash[:error] = "Unable to shorten this url"
     end

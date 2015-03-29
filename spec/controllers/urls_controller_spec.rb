@@ -1,13 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe WelcomeController, type: :controller do
+RSpec.describe UrlsController, type: :controller do
 
-  describe "WELCOME #INDEX" do
+  describe "URL #INDEX" do
 
-    xit "has a input field to shorten a long url" do
-      get :index
+    it "displays all urls" do
 
-      expect().to have_content(Stytta)
+     get :index
+
+     expect(response.status).to eq(200)
     end
   end
 end

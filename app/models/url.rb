@@ -17,11 +17,4 @@ class Url < ActiveRecord::Base
   def self.sort_by_most_recent
     all.order(created_at: :desc)
   end
-
-  # def get_title
-  #   @url = Url.find(params[:id])
-  #   doc = Nokogiri::HTML(HTTParty.get(original_url))
-  #   page_title = doc.css("title").first.child.text
-  #   self.title = page_title
-  # end
 end

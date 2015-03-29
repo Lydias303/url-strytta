@@ -9,10 +9,6 @@ h1 {
  font-size: 30px;
 }
 
-// .welcome-header {
-//   padding: 100px;
-// }
-
 body {
   font-family: 'Lobster', cursive;
   background: rgba(21, 193, 220, 0.4);
@@ -45,9 +41,14 @@ input#url_original_url {
 .btn {
   border-radius: 25px;
   background: rgba(209, 85, 233, 0.72);
-  border: #9516c7;
+  outline: none;
+  border: none;
   padding: 6px;
 }
+
+.btn:hover {
+    color: white;
+  }
 
 #text_box {
   margin-top: 5px;
@@ -77,9 +78,6 @@ a {
   color: #ff925c;
 }
 
-// .create-shortened-url {
-//   padding: 50px;
-// }
 
 .url-list {
   background: black;
@@ -89,14 +87,12 @@ a {
   margin-top: 20px;
 }
 
-/* CSS used here will be applied after bootstrap.css */
 .mini-submenu{
   display:none;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 4px;
   padding: 9px;
-  /*position: relative;*/
   width: 42px;
 
 }
