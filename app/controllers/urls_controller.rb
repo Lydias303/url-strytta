@@ -22,6 +22,7 @@ class UrlsController < ApplicationController
     @url = Url.new(url_params)
     if @url.save
       flash[:notice] = "Your shortened url has been created!"
+      FindTitleWorker.perform_async(@url.id)
       redirect_to root_path
     else
       flash[:error] = "Unable to shorten this url"
