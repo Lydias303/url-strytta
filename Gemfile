@@ -32,6 +32,8 @@ gem 'nokogiri'
 
 gem 'font-awesome-sass'
 
+gem 'sidekiq'
+
 group :development, :test do
 
   gem 'byebug'
@@ -55,4 +57,6 @@ group :development, :test do
   gem 'better_errors'
 
   gem 'binding_of_caller'
+
+  gem 'launchy'
 end

@@ -1,15 +1,14 @@
-<p>Urls</p>
-</div>
+<h1>Urls</h1>
 <div class="well">
-  <div class="col"
-<% @urls.each do |f| %>
-  <%= f.title %>
-  <%= f.clicks %>
-  <%= link_to f.shortened_url, url_path(f.id) %><br>
-<% end %>
-<div class="search-field">
-  <form>
-    <input type="text" id="text_box" />
-  </form>
-</div>
+  <div class="col" id="sorted-url-index">
+  <% @urls.each do |f| %>
+  <ul>
+    <li><%= f.title %> | <%= link_to f.shortened_url, url_path(f.id) %> |<%= f.clicks %></li><br>
+  </ul>
+  <% end %>
+  <div class="search-field">
+    <form>
+      <input type="text" id="text_box" />
+    </form>
+  </div>
 </div>

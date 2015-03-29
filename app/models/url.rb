@@ -1,6 +1,5 @@
 class Url < ActiveRecord::Base
   before_create :generate_shortened_url
-  before_create :get_title
   validates :original_url, presence: true
 
   def generate_shortened_url
@@ -17,11 +16,5 @@ class Url < ActiveRecord::Base
 
   def self.sort_by_most_recent
     all.order(created_at: :desc)
-  end
-
-  def get_title
-    doc = Nokogiri::HTML(HTTParty.get(original_url))
-    page_title = doc.css("title").first.child.text
-    self.title = page_title
   end
 end
