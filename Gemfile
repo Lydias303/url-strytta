@@ -59,4 +59,6 @@ group :development, :test do
   gem 'binding_of_caller'
 
   gem 'launchy'
+
+  gem 'simplecov', :require => false, :group => :test
 end
