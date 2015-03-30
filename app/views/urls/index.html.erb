@@ -1,14 +1,31 @@
-<h1>Urls</h1>
-<div class="well">
-  <div class="col" id="sorted-url-index">
-  <% @urls.each do |f| %>
-  <ul>
-    <li><%= f.title %> | <%= link_to f.shortened_url, url_path(f.id) %> |<%= f.clicks %></li><br>
-  </ul>
-  <% end %>
-  <div class="search-field">
-    <form>
-      <input type="text" id="text_box" />
-    </form>
+<h1 class="index-header">Urls</h1>
+<div class="well index-well">
+  <div class="row index-search">
+    <div class="col-md-4">
+      <form>
+        <input type="text" id="text_box"/><span class="filter-text"><%= image_tag "filter-arrow.png" %></span>
+      </form>
+    </div>
+      <div class="col-md-2">
+        <span class="search-icons"> <a href="/"><%= icon('home') %></a></span>
+    </div>
+      <div class="col-md-2">
+        <span class="search-icons"> <a href="/urls?sort=popularity"><%= icon('line-chart') %></a></span>
+      </div>
+      <div class="col-md-2">
+        <span class="search-icons"> <a href="/urls?sort=most-recent"><%= icon('clock-o') %></a></span>
+      </div>
+      <div class="col-md-2">
+        <span class="search-icons"> <a href="/urls"><%= icon('list') %></a></span>
+      </div>
   </div>
-</div>
+  </div>
+  <%= render 'shared/urls_display' %>
+  
+  <script>
+  $("#text_box").keyup(function() {
+    $("li").hide();
+    var term = $(this).val();
+    $("li:contains('"+ term +"')").show();
+  });
+  </script>

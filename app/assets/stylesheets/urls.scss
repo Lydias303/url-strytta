@@ -4,6 +4,23 @@ p {
   margin-top: 70px;
 }
 
-.urls-index-header {
-  padding-top: 80px;
+.index-header{
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.search-icons {
+  color: black;
+  font-size: 60px;
+}
+
+.index-well {
+  background: #797979;
+}
+
+.nav-icons {
+  font-size: 15px;
+  a:hover {
+    color: white;
+  }
 }

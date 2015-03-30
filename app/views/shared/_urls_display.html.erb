@@ -1,0 +1,9 @@
+<div class="row url-list">
+  <div class="col-md-7 col-md-offset-1" id="url-title">
+    <ul>
+      <% @urls.each do |f| %>
+      <li><%= f.title %><span class="font-icon"> <%= icon('compress') %></span> <%= link_to f.display_shortened_url, url_path(f.id) %></li><br>
+      <% end %>
+    </ul>
+  </div>
+</div>

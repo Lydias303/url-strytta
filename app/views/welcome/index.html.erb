@@ -17,32 +17,22 @@
 
 <div class="row inner-well">
   <div class="col-md-2 col-md-offset-1" id="url-title">
-    <p>Urls</p>
+    <h1>Urls</h1>
   </div>
-  <div class="col-md-9">
+  <div class="col-md-3 col-md-offset-6" id="search-dropdown">
     <%= render 'shared/nav' %>
   </div>
 </div>
 
 <div class="row search-bubble">
   <div class="col-md-11 col-md-offset-1" id="url-title">
-      <form>
-        <input type="text" id="text_box"/><span class="filter-text"><%= image_tag "filter-arrow.png" %></span>
-      </form>
+    <form>
+      <input type="text" id="text_box"/><span class="filter-text-index"><%= image_tag "filter-arrow.png" %></span>
+    </form>
   </div>
 </div>
 
-<div class="row url-list">
-  <div class="col-md-7 col-md-offset-1" id="url-title">
-    <ul>
-      <% @urls.each do |f| %>
-      <li><%= f.title %><span class="font-icon"> <%= icon('compress') %></span> <%= link_to f.display_shortened_url, url_path(f.id) %></li><br>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-
+<%= render 'shared/urls_display' %>
 
 <script>
 $("#text_box").keyup(function() {

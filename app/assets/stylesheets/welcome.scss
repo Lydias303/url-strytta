@@ -56,7 +56,7 @@ input#url_original_url {
   padding: 6px;
   border: solid 2px #38d5fb;
   outline: none;
-  padding-right: 20px;
+  margin-left: 37px;
 }
 
 li {
@@ -113,10 +113,6 @@ a {
   background-color: #000;
 }
 
-.filter-text {
-  margin-right: 500px;
-}
-
 #slide-submenu{
   background: rgba(0, 0, 0, 0.45);
   display: inline-block;
@@ -135,4 +131,21 @@ a {
 
 .octo {
   margin-top: 0px;
+}
+
+#search-dropdown {
+  margin-top: 85px;
+}
+
+.list-group-item {
+  background: #38d5fb;
+  a {
+    color: black;
+  }
+}
+
+span.list-group-item.active {
+  background: #ff925c;
+  border: black;
+  font-size: 22px;
 }

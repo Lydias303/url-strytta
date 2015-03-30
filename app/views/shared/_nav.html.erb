@@ -1,35 +1,31 @@
-<div class="row">
-  <div class="col-md-3 col-md-offset-9 sidebar">
-      <div class="mini-submenu">
-        <i class="fa fa-search fa-5x pull-right"></i>
-      </div>
-    <div class="list-group">
-      <span href="#" class="list-group-item active">
-        Browse Urls
-        <span class="pull-right" id="slide-submenu">
-          <i class="fa fa-times"></i>
-        </span>
-      </span>
-      <%= link_to "Sort By Popularity", urls_path(sort: 'popularity'), class: "list-group-item" %>
-      <%= link_to "Sort By Most Recent", urls_path(sort: 'most-recent'), class: "list-group-item" %>
-      <%= link_to "View All", urls_path, class: "list-group-item" %>
-
-    </div>
-  </div>
+<div class="mini-submenu" style="display:show">
+  <i class="fa fa-search fa-5x pull-right"></i>
+</div>
+<div class="list-group" style="display:none">
+  <span class="list-group-item active">
+    Browse Urls
+    <span class="pull-right" id="slide-submenu">
+      <i class="fa fa-times"></i>
+    </span>
+  </span>
+  <span class="list-group-item nav-icons"> <a href="/urls"><%= icon('list') %> View All</a></span>
+  <span class="list-group-item nav-icons"> <a href="/urls?sort=most-recent"><%= icon('clock-o') %> Sort By Most Recent </a></span>
+  <span class="list-group-item nav-icons"> <a href="/urls?sort=popularity"><%= icon('line-chart') %> Sort By Popularity</a></span>
 </div>
 
 
-    <script>
-    $("#text_box").keyup(function() {
-      $("li").hide();
-      var term = $(this).val();
-      $("li:contains('"+ term +"')").show();
-    });
-    </script>
+
+<script>
+$("#text_box").keyup(function() {
+  $("li").hide();
+  var term = $(this).val();
+  $("li:contains('"+ term +"')").show();
+});
+</script>
 
 
 <script>
-$('.mini-submenu').hide();
+$('.mini-submenu').show();
 $(function(){
 
   $('.mini-submenu').on('click',function(){
