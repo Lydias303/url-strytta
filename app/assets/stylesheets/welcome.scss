@@ -41,13 +41,19 @@ input#url_original_url {
 .btn {
   border-radius: 25px;
   background: rgba(209, 85, 233, 0.72);
-  outline: none;
+  outline: none !important;
   border: none;
   padding: 6px;
+
 }
 
 .btn:hover {
     color: white;
+    outline: none;
+  }
+
+  .btn:active {
+    outline: none;
   }
 
 #text_box {
