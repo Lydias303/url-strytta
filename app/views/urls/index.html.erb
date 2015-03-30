@@ -41,6 +41,12 @@
 
   <script>
   $("#text_box").keyup(function() {
+  $.expr[":"].contains = $.expr.createPseudo(function(arg) {
+      return function( elem ) {
+          return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+      };
+  });
+
     $("li").hide();
     var term = $(this).val();
     $("li:contains('"+ term +"')").show();
