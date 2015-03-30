@@ -1,4 +1,19 @@
+<div class="row">
+  <div class="col-md-3">
 <h1 class="index-header">Urls</h1>
+</div>
+<div class="col-md-7 col-md-offset-2"
+  <div class="sort-title">
+    <% if params[:sort] == "popularity" %>
+    <%= image_tag "pop-octo2.png" %>
+    <% elsif params[:sort] == "most-recent" %>
+    <%= image_tag "recent-octo.png" %>
+    <% else %>
+    <%= image_tag "index-octo.png" %>
+    <% end %>
+</div>
+</div>
+</div>
 <div class="well index-well">
   <div class="row index-search">
     <div class="col-md-4">
@@ -20,8 +35,10 @@
       </div>
   </div>
   </div>
+
+
   <%= render 'shared/urls_display' %>
-  
+
   <script>
   $("#text_box").keyup(function() {
     $("li").hide();
