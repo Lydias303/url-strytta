@@ -112,24 +112,10 @@
         null,
         1,
         null,
-        null,
-        null,
         1,
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         null,
@@ -189,6 +175,7 @@
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -434,8 +421,8 @@
       "/Users/lydiashafer/Desktop/module3/module4/stytta/app/controllers/welcome_controller.rb": [
         1,
         1,
-        10,
-        10,
+        9,
+        9,
         null,
         null
       ],
@@ -482,10 +469,6 @@
         null,
         1,
         1,
-        1,
-        null,
-        1,
-        null,
         1,
         null,
         1,
@@ -545,7 +528,7 @@
         null,
         null,
         1,
-        11,
+        10,
         null,
         null
       ],
@@ -564,6 +547,6 @@
         null
       ]
     },
-    "timestamp": 1427666403
+    "timestamp": 1427745029
   }
 }

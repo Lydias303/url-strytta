@@ -42,11 +42,7 @@ describe "url"  do
     new_url = create(:url)
     fresh_url = create(:url)
 
-    visit root_path
-
-    click_link_or_button("Sort By Most Recent")
-
-    expect(current_path).to eq(urls_path)
+    visit urls_path(sort: 'most-recent')
 
     expect(find(:css, 'li', match: :first).text).to include(new_url.title)
     expect(find(:css, 'li', match: :first).text).to include(new_url.shortened_url)
