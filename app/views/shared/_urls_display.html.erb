@@ -2,7 +2,7 @@
   <div class="col-md-7 col-md-offset-1" id="url-title">
     <ul>
       <% @urls.each do |f| %>
-      <li><%= f.title %><span class="font-icon"> <%= icon('compress') %></span> <%= link_to f.display_shortened_url, url_path(f.id) %></li><br>
+      <li><%= f.title %><span class="font-icon"> <%= icon('compress') %></span> <%= link_to f.display_shortened_url, url_path(f.id) %></br> <span class="font-icon-clicks"> <%= icon('heart') %> </span> <%= f.clicks %></li><br>
       <% end %>
     </ul>
   </div>
