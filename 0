@@ -1,2 +1,0 @@
-      invoke  active_record
-      create    db/migrate/20150326191629_add_column_clicks_to_urls.rb
