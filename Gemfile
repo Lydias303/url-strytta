@@ -34,6 +34,8 @@ gem 'font-awesome-sass'
 
 gem 'sidekiq'
 
+gem 'unicorn'
+
 group :development, :test do
 
   gem 'byebug'
