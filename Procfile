@@ -1,2 +1,1 @@
-worker:  bundle exec rake jobs:start
-sidekiq: bundle exec sidekiq -c 15 -v
+web: bundle exec unicorn -p $PORT -E $RACK_ENV -c ./config/unicorn.rb
