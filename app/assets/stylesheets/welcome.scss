@@ -160,6 +160,29 @@ span.list-group-item.active {
   color: #e573fc;
   font-size: 10px;
 }
+
 .url-list {
   padding-bottom: 200px;
+}
+
+#flash_notice {
+  &.error {
+    border: solid 4px #900;
+          background-color: #ff6565;
+        }
+  &.notice {
+    border: solid 4px #26722D;
+          background-color: #a4e7a0;
+        }
+  color: black;
+  z-index: 999;
+  position: fixed;
+  font-weight: bold;
+  width: 96%;
+  margin: 20px;
+  padding-top: 50px;
+        p {
+                font-size: 110%;
+                margin: 15px 0;
+        }
 }

@@ -35,12 +35,12 @@ RSpec.describe Api::V1::UrlController, type: :controller do
   describe "POST create" do
 
     it "can create a new url with json" do
-      json = { :format => 'json', :url => {:title => "url", :original_url => "https://blah.com/2342134123ewas", :shorted_url => "http://localhost:3000/12"}}
+      json = { :format => 'json', :url => {:title => "url", :original_url => "http://www.google.com"}}
 
       post :create, json
 
       url = JSON.parse(response.body)
-  
+
 
       expect(Url.count).to eq(1)
     end

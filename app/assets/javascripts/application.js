@@ -7,3 +7,12 @@ $("#text_box").keyup(function() {
   var term = $(this).val();
   $("li:contains('"+ term +"')").show();
 });
+
+//fadeout flash messages
+$(document).ready(function() {
+    setTimeout(hideFlashes, 600);
+});
+
+var hideFlashes = function() {
+  $("#flash_notice, #flash_error").fadeOut(400);
+}
