@@ -25,9 +25,9 @@ class Url < ActiveRecord::Base
   private
 
   def sanitize_url
-    if original_url == /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    if original_url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/)
       self.original_url = original_url
-    elsif original_url == /^(www?)/
+    elsif original_url.match(/^(www?)/)
       self.original_url = "http://#{url}"
     else
       false
