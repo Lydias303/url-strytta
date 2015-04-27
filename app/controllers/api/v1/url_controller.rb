@@ -23,7 +23,7 @@ class Api::V1::UrlController < ApplicationController
     else
       respond_to do |format|
         format.html { render :new}
-        format.json { render json: {message: "Item not created", errors: @item.errors }}
+        format.json { render json: {message: "URL not created", errors: @url.errors }}
       end
     end
   end
