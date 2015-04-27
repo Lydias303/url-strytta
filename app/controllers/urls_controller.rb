@@ -22,7 +22,7 @@ class UrlsController < ApplicationController
     if @url.save
       redirect_to root_path, notice: "Your shortened url has been created!"
     else
-      flash[:error] = "Unable to shorten this url"
+      redirect_to root_path, notice: "Sorry! That Url is invalid!"
     end
   end
 
